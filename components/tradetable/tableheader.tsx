@@ -26,6 +26,7 @@ export const HeaderandSort = ({
     <>
       <TableHeader>
         <TableRow>
+          <TableHead></TableHead>
           <TableHead className="text-center">場所</TableHead>
           <TableHead className="text-center">材料</TableHead>
           <TableHead className="text-center">数</TableHead>
