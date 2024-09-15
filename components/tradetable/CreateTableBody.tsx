@@ -4,13 +4,7 @@ import { TableBody, TableCell, TableRow } from '@/components/ui/table';
 import { useState } from 'react';
 import { Checkbox } from '../ui/checkbox';
 
-export const CreateTableBody = ({
-  trades,
-  filtable,
-}: {
-  trades: TradeObj[];
-  filtable: TradeObj[];
-}) => {
+export const CreateTableBody = ({ filtable }: { filtable: TradeObj[] }) => {
   const [selectedRows, setSelectedRows] = useState<number[]>([]);
 
   const toggleRowSelection = (id: number) => {
