@@ -5,6 +5,7 @@ import Radio from '@/components/crombas/calc/Radio';
 import Toggles from '@/components/crombas/calc/Toggles';
 import { useState } from 'react';
 import { CalcObj } from '../typs/types';
+import { Button } from '@/components/ui/button';
 
 const Crombas = () => {
   const [calc, setCalc] = useState<CalcObj>({
@@ -61,7 +62,14 @@ const Crombas = () => {
         </div>
 
         <Radio setCalc={setCalc} />
-        <div className="mt-5 font-bold">計算結果： {Answer() + calc.text}</div>
+        <div className="mt-5 font-bold">
+          <span className="mr-2">計算結果： {Answer() + calc.text}</span>
+          <Button
+            onClick={() => navigator.clipboard.writeText(Answer() + calc.text)}
+          >
+            コピー
+          </Button>
+        </div>
       </div>
     </section>
   );
