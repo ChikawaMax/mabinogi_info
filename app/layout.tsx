@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'mabinogi info',
-  description: 'mabinogi info',
+  title: 'マビノギ攻略',
+  description: 'マビノギの攻略情報を記載しています。',
 };
 
 export default function RootLayout({
