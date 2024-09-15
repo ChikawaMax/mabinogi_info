@@ -1,5 +1,6 @@
 'use client';
 
+import { CalcObj } from '@/app/typs/types';
 import RadioItems from '@/components/crombas/calc/RadioItems';
 import { RadioGroup } from '@/components/ui/radio-group';
 import { Dispatch, SetStateAction } from 'react';

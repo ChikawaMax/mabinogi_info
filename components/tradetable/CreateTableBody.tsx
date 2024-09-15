@@ -3,6 +3,7 @@
 import { TableBody, TableCell, TableRow } from '@/components/ui/table';
 import { useState } from 'react';
 import { Checkbox } from '../ui/checkbox';
+import { TradeObj } from '@/app/typs/types';
 
 export const CreateTableBody = ({ filtable }: { filtable: TradeObj[] }) => {
   const [selectedRows, setSelectedRows] = useState<number[]>([]);

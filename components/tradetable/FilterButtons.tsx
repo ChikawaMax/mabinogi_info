@@ -1,13 +1,12 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from '../ui/button';
+import { TradeObj } from '@/app/typs/types';
 
 export const FilterButtons = ({
   trades,
-  filtable,
   setFiltable,
 }: {
   trades: TradeObj[];
-  filtable: TradeObj[];
   setFiltable: Dispatch<SetStateAction<TradeObj[]>>;
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {

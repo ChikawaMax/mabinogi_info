@@ -4,6 +4,7 @@ import InputCalc from '@/components/crombas/calc/InputCalc';
 import Radio from '@/components/crombas/calc/Radio';
 import Toggles from '@/components/crombas/calc/Toggles';
 import { useState } from 'react';
+import { CalcObj } from '../typs/types';
 
 const Crombas = () => {
   const [calc, setCalc] = useState<CalcObj>({

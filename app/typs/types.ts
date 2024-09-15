@@ -1,4 +1,4 @@
-interface TradeObj {
+export interface TradeObj {
   id: number;
   location: string;
   item: string;
@@ -8,7 +8,7 @@ interface TradeObj {
   skill: string;
 }
 
-interface CalcObj {
+export interface CalcObj {
   index1: number;
   index2: number;
   index3: number;

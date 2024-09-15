@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { useState } from 'react';
+import { TradeObj } from '@/app/typs/types';
 
 export const CreateHeaderBody = ({
   trades,
