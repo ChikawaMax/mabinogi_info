@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { useState } from 'react';
 
-export const HeaderandSort = ({
+export const CreateHeaderBody = ({
   trades,
   setFiltable,
 }: {

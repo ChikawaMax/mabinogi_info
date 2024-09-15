@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from '../ui/button';
 
-export const Filtertable = ({
+export const FilterButtons = ({
   trades,
   filtable,
   setFiltable,
