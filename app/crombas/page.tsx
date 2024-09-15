@@ -65,7 +65,10 @@ const Crombas = () => {
         <div className="mt-5 font-bold">
           <span className="mr-2">計算結果： {Answer() + calc.text}</span>
           <Button
-            onClick={() => navigator.clipboard.writeText(Answer() + calc.text)}
+            onClick={() => {
+              navigator.clipboard.writeText(Answer() + calc.text);
+              alert('コピーしました。');
+            }}
           >
             コピー
           </Button>
