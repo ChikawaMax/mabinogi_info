@@ -9,27 +9,27 @@ import {
 } from '@/components/ui/table';
 
 const rooms0 = {
-  room1: { color: 'green', info: '大/3/3カ' },
-  room2: { color: 'green', info: '小/2/2カ' },
-  room3: { color: 'green', info: '大/2/2フ' },
-  room4: { color: 'green', info: '通/16' },
-  room5: { color: 'yellow', info: '小/2/2カ' },
-  room6: { color: 'green', info: '小/2/2フ' },
-  room7: { color: 'green', info: '悪/2/2フ' },
-  room8: { color: 'green', info: '大/4/3カ4フ' },
+  room1: { color: 'text-green-500', info: '大/3/3カ' },
+  room2: { color: 'text-green-500', info: '小/2/2カ' },
+  room3: { color: 'text-green-500', info: '大/2/2フ' },
+  room4: { color: 'text-green-500', info: '通/16' },
+  room5: { color: 'text-yellow-500', info: '小/2/2カ' },
+  room6: { color: 'text-green-500', info: '小/2/2フ' },
+  room7: { color: 'text-green-500', info: '悪/2/2フ' },
+  room8: { color: 'text-green-500', info: '大/4/3カ4フ' },
 };
 
 const rooms100 = {
   ...rooms0,
-  room1: { ...rooms0.room1, color: 'red' },
-  room2: { ...rooms0.room2, color: 'red' },
-  room3: { color: 'yellow', info: '小/2/2カ3フ' },
-  room4: { ...rooms0.room4, color: 'red' },
-  room5: { color: 'red', info: '大/2' },
-  room6: { color: 'red', info: '大/2/2カ3フ' },
-  room7: { ...rooms0.room7, color: 'red' },
-  room8: { ...rooms0.room8, color: 'red' },
-  room9: { color: 'red', info: '大' },
+  room1: { ...rooms0.room1, color: 'text-red-500' },
+  room2: { ...rooms0.room2, color: 'text-red-500' },
+  room3: { color: 'text-yellow-500', info: '小/2/2カ3フ' },
+  room4: { ...rooms0.room4, color: 'text-red-500' },
+  room5: { color: 'text-red-500', info: '大/2' },
+  room6: { color: 'text-red-500', info: '大/2/2カ3フ' },
+  room7: { ...rooms0.room7, color: 'text-red-500' },
+  room8: { ...rooms0.room8, color: 'text-red-500' },
+  room9: { color: 'text-red-500', info: '大' },
 };
 
 interface cromOBJ {
@@ -56,9 +56,9 @@ const crombas: cromOBJ[] = [
     id: 2,
     level: '30%',
     ...rooms0,
-    room6: { ...rooms0.room6, color: 'red' },
-    room7: { ...rooms0.room7, color: 'red' },
-    room8: { ...rooms0.room8, color: 'red' },
+    room6: { ...rooms0.room6, color: 'text-red-500' },
+    room7: { ...rooms0.room7, color: 'text-red-500' },
+    room8: { ...rooms0.room8, color: 'text-red-500' },
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const crombas: cromOBJ[] = [
     room1: { ...rooms0.room1 },
     room4: { ...rooms0.room4 },
     room5: { ...rooms0.room5 },
-    room9: { ...rooms100.room9, color: 'yellow' },
+    room9: { ...rooms100.room9, color: 'text-yellow-500' },
   },
   {
     id: 4,
@@ -85,10 +85,10 @@ const crombas: cromOBJ[] = [
   },
   {
     id: 9,
-    level: '0%',
+    level: '90%',
     ...rooms100,
     room1: { ...rooms0.room1 },
-    room9: { ...rooms100.room9, color: 'yellow' },
+    room9: { ...rooms100.room9, color: 'text-yellow-500' },
   },
   {
     id: 10,
@@ -121,33 +121,33 @@ const CrombasTable = () => {
           {crombas.map((crom) => (
             <TableRow key={crom.id}>
               <TableCell>{crom.level}</TableCell>
-              <TableCell className={`text-${crom.room1.color}-500`}>
+              <TableCell className={crom.room1.color}>
                 {crom.room1.info}
               </TableCell>
-              <TableCell className={`text-${crom.room2.color}-500`}>
+              <TableCell className={crom.room2.color}>
                 {crom.room2.info}
               </TableCell>
-              <TableCell className={`text-${crom.room3.color}-500`}>
+              <TableCell className={crom.room3.color}>
                 {crom.room3.info}
               </TableCell>
-              <TableCell className={`text-${crom.room4.color}-500`}>
+              <TableCell className={crom.room4.color}>
                 {crom.room4.info}
               </TableCell>
-              <TableCell className={`text-${crom.room5.color}-500`}>
+              <TableCell className={crom.room5.color}>
                 {crom.room5.info}
               </TableCell>
-              <TableCell className={`text-${crom.room6.color}-500`}>
+              <TableCell className={crom.room6.color}>
                 {crom.room6.info}
               </TableCell>
-              <TableCell className={`text-${crom.room7.color}-500`}>
+              <TableCell className={crom.room7.color}>
                 {crom.room7.info}
               </TableCell>
-              <TableCell className={`text-${crom.room8.color}-500`}>
+              <TableCell className={crom.room8.color}>
                 {crom.room8.info}
               </TableCell>
               <TableCell></TableCell>
               {crom.room9 ? (
-                <TableCell className={`text-${crom.room9.color}-500`}>
+                <TableCell className={crom.room9.color}>
                   {crom.room9.info}
                 </TableCell>
               ) : (
