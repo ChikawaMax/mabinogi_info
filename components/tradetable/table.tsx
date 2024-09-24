@@ -16,7 +16,7 @@ export const Tradetable = ({ trades }: { trades: TradeObj[] }) => {
         <h1 className="text-2xl">物々交換リスト</h1>
         <FilterButtons trades={trades} setFiltable={setFiltable} />
       </div>
-      <Table>
+      <Table className="border">
         <CreateHeaderBody trades={trades} setFiltable={setFiltable} />
         <CreateTableBody filtable={filtable} />
       </Table>
