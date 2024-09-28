@@ -1,4 +1,4 @@
-import { Table, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Table } from '@/components/ui/table';
 import CromBody from './CromBody';
 import CromHeader from './CromHeader';
 
