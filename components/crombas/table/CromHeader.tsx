@@ -1,7 +1,6 @@
 import { TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const headers = [
-  '',
   'エルグ',
   '１部屋目',
   '2部屋目',
