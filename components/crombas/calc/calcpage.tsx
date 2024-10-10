@@ -4,8 +4,8 @@ import InputCalc from '@/components/crombas/calc/InputCalc';
 import Radio from '@/components/crombas/calc/Radio';
 import Toggles from '@/components/crombas/calc/Toggles';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { CalcObj } from '@/app/typs/types';
+import CopyButton from './CopyButton';
 
 const CalcPage = () => {
   const [calc, setCalc] = useState<CalcObj>({
@@ -16,37 +16,6 @@ const CalcPage = () => {
     calc2: 'plus',
     text: 'インボリック',
   });
-
-  const Answer = (): number => {
-    const a = calc.index1;
-    const b = calc.index2;
-    const c = calc.index3;
-    if (calc.calc1 === 'plus') {
-      if (calc.calc2 === 'plus') {
-        return a + b + c;
-      } else if (calc.calc2 === 'minus') {
-        return a + b - c;
-      } else {
-        return a + b * c;
-      }
-    } else if (calc.calc1 === 'minus') {
-      if (calc.calc2 === 'plus') {
-        return a - b + c;
-      } else if (calc.calc2 === 'minus') {
-        return a - b - c;
-      } else {
-        return a - b * c;
-      }
-    } else {
-      if (calc.calc2 === 'plus') {
-        return a * b + c;
-      } else if (calc.calc2 === 'minus') {
-        return a * b - c;
-      } else {
-        return a * b * c;
-      }
-    }
-  };
 
   return (
     <section>
@@ -60,19 +29,8 @@ const CalcPage = () => {
           <Toggles setCalc={setCalc} field="calc2" />
           <InputCalc calc={calc} setCalc={setCalc} getname="index3" />
         </div>
-
         <Radio setCalc={setCalc} />
-        <div className="mt-5 font-bold">
-          <span className="mr-2">計算結果： {Answer() + calc.text}</span>
-          <Button
-            onClick={() => {
-              navigator.clipboard.writeText(Answer() + calc.text);
-              alert('コピーしました。');
-            }}
-          >
-            コピー
-          </Button>
-        </div>
+        <CopyButton calc={calc} />
       </div>
     </section>
   );
