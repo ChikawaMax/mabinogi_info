@@ -1,10 +1,10 @@
 import { TableBody, TableCell, TableRow } from '@/components/ui/table';
-import { crombas } from './CromObj';
+import { cromOBJ } from '@/app/typs/types';
 
-const CromBody = () => {
+const CromBody = ({ selectTable }: { selectTable: cromOBJ[] }) => {
   return (
     <TableBody>
-      {crombas.map((crom) => (
+      {selectTable.map((crom) => (
         <TableRow key={crom.id}>
           <TableCell>{crom.level}</TableCell>
           <TableCell className={crom.room1.color}>{crom.room1.info}</TableCell>
