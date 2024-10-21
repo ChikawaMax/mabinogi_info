@@ -13,7 +13,14 @@ const CrombasTable = () => {
 
   return (
     <section className="mt-3 border p-4 mx-3 rounded-md">
-      <CrombasFilter setSelectTable={setSelectTable} />
+      <div className="text-red-500">例）大/2/2カ3フ</div>
+      <div>
+        大部屋 / 全部で２沸き / 2沸き目カーリー 3沸き目ファントム /
+        赤い魔法陣に入る
+      </div>
+      <div className="my-4">
+        <CrombasFilter setSelectTable={setSelectTable} />
+      </div>
       <Table>
         <CromHeader />
         <CromBody selectTable={selectTable} />
