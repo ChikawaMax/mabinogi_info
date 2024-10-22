@@ -13,7 +13,9 @@ const CrombasTable = () => {
 
   return (
     <section className="mt-3 border p-4 mx-3 rounded-md">
-      <div className="text-red-500">例）大/2/2カ3フ</div>
+      <div>
+        例）<span className="text-red-500">大/2/2カ3フ</span>
+      </div>
       <div>
         大部屋 / 全部で２沸き / 2沸き目カーリー 3沸き目ファントム /
         赤い魔法陣に入る
