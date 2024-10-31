@@ -7,12 +7,12 @@ const Header = () => {
         <h1 className="text-3xl font-bold">
           <Link href={'/'}>マビノギ攻略</Link>
         </h1>
-        <ul className="flex gap-3">
+        <ul className="hidden sm:flex gap-3">
           <li className="hover:border-b">
-            <Link href={'/trade'}>物々交換リスト</Link>
+            <Link href={'/crombas'}>クロムバス攻略</Link>
           </li>
           <li className="hover:border-b">
-            <Link href={'/crombas'}>クロムバス</Link>
+            <Link href={'/trade'}>物々交換リスト</Link>
           </li>
         </ul>
       </div>

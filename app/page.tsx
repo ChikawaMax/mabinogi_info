@@ -1,16 +1,14 @@
-import Link from 'next/link';
+import { LinkCards } from '@/components/LinkCard';
 
 const Home = () => {
   return (
     <main>
-      <ul className="mt-5 mx-5 list-inside list-disc">
-        <li className="hover:underline">
-          <Link href={'/trade'}>物々交換リスト</Link>
-        </li>
-        <li className="hover:underline">
-          <Link href={'/crombas'}>クロムバス</Link>
-        </li>
-      </ul>
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <LinkCards imgName="crombas" title="クロムバス攻略" />
+          <LinkCards imgName="trade" title="物々交換リスト" />
+        </div>
+      </div>
     </main>
   );
 };
