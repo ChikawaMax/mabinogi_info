@@ -13,7 +13,7 @@ const Home = async () => {
   }
 
   return (
-    <main>
+    <main className="mb-28">
       <Tradetable trades={trades} />
     </main>
   );

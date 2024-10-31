@@ -3,7 +3,7 @@ import CrombasTable from '@/components/crombas/table/CrombasTable';
 
 const Crombas = () => {
   return (
-    <main>
+    <main className="mb-28">
       <CalcPage />
       <CrombasTable />
     </main>
