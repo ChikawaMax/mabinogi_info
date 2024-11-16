@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { crombas } from './CromObj';
 import { Dispatch, SetStateAction } from 'react';
-import { cromOBJ } from '@/app/typs/types';
+import { cromOBJ } from '@/app/types/types';
 
 export const CrombasFilter = ({
   setSelectTable,

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { useState } from 'react';
-import { TradeObj } from '@/app/typs/types';
+import { TradeObj } from '@/app/types/types';
 
 export const CreateHeaderBody = ({
   trades,
@@ -15,7 +15,11 @@ export const CreateHeaderBody = ({
   const sortClick = () => {
     let sortTable;
     if (skillsort) {
-      sortTable = [...trades].sort((a, b) => a.skill.localeCompare(b.skill));
+      sortTable = [...trades].sort((a, b) =>
+        a.properties.skill.rich_text[0].plain_text.localeCompare(
+          b.properties.skill.rich_text[0].plain_text
+        )
+      );
     } else {
       sortTable = [...trades];
     }

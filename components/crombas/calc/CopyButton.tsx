@@ -1,4 +1,4 @@
-import { CalcObj } from '@/app/typs/types';
+import { CalcObj } from '@/app/types/types';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 

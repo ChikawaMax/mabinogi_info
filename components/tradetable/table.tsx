@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { FilterButtons } from './FilterButtons';
 import { CreateTableBody } from './CreateTableBody';
 import { CreateHeaderBody } from './CreateHeaderBody';
-import { TradeObj } from '@/app/typs/types';
+import { TradeObj } from '@/app/types/types';
 
 export const Tradetable = ({ trades }: { trades: TradeObj[] }) => {
   const [filtable, setFiltable] = useState<TradeObj[]>(trades);

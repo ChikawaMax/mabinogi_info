@@ -1,5 +1,5 @@
 import { TableBody, TableCell, TableRow } from '@/components/ui/table';
-import { cromOBJ } from '@/app/typs/types';
+import { cromOBJ } from '@/app/types/types';
 
 const CromBody = ({ selectTable }: { selectTable: cromOBJ[] }) => {
   return (

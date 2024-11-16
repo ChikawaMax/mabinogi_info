@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { CalcObj } from '@/app/typs/types';
+import { CalcObj } from '@/app/types/types';
 
 const Toggles = ({
   setCalc,

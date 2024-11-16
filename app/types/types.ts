@@ -1,11 +1,37 @@
+interface TradeProperty {
+  id: {
+    number: number;
+  };
+  location: {
+    select: {
+      name: string;
+    };
+  };
+  item: {
+    title: {
+      plain_text: string;
+    }[];
+  };
+  item_quantity: {
+    number: number;
+  };
+  material: {
+    rich_text: {
+      plain_text: string;
+    }[];
+  };
+  material_quantity: {
+    number: number;
+  };
+  skill: {
+    rich_text: {
+      plain_text: string;
+    }[];
+  };
+}
+
 export interface TradeObj {
-  id: number;
-  location: string;
-  item: string;
-  item_quantity: number;
-  material: string;
-  material_quantity: number;
-  skill: string;
+  properties: TradeProperty;
 }
 
 export interface CalcObj {

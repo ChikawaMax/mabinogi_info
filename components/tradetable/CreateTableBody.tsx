@@ -3,7 +3,7 @@
 import { TableBody, TableCell, TableRow } from '@/components/ui/table';
 import { useState } from 'react';
 import { Checkbox } from '../ui/checkbox';
-import { TradeObj } from '@/app/typs/types';
+import { TradeObj } from '@/app/types/types';
 
 export const CreateTableBody = ({ filtable }: { filtable: TradeObj[] }) => {
   const [selectedRows, setSelectedRows] = useState<number[]>([]);
@@ -21,24 +21,36 @@ export const CreateTableBody = ({ filtable }: { filtable: TradeObj[] }) => {
       <TableBody>
         {filtable.map((trade) => (
           <TableRow
-            key={trade.id}
+            key={trade.properties.id.number}
             className={
-              selectedRows.includes(trade.id)
+              selectedRows.includes(trade.properties.id.number)
                 ? 'bg-violet-600 hover:bg-violet-700'
                 : ''
             }
           >
             <TableCell className="text-center">
-              <Checkbox onClick={() => toggleRowSelection(trade.id)} />
+              <Checkbox
+                onClick={() => toggleRowSelection(trade.properties.id.number)}
+              />
             </TableCell>
-            <TableCell className="text-center">{trade.location}</TableCell>
-            <TableCell className="text-center">{trade.item}</TableCell>
-            <TableCell className="text-center">{trade.item_quantity}</TableCell>
-            <TableCell className="text-center">{trade.material}</TableCell>
             <TableCell className="text-center">
-              {trade.material_quantity}
+              {trade.properties.location.select.name}
             </TableCell>
-            <TableCell className="text-center">{trade.skill}</TableCell>
+            <TableCell className="text-center">
+              {trade.properties.item.title[0].plain_text}
+            </TableCell>
+            <TableCell className="text-center">
+              {trade.properties.item_quantity.number}
+            </TableCell>
+            <TableCell className="text-center">
+              {trade.properties.material.rich_text[0].plain_text}
+            </TableCell>
+            <TableCell className="text-center">
+              {trade.properties.material_quantity.number}
+            </TableCell>
+            <TableCell className="text-center">
+              {trade.properties.skill.rich_text[0].plain_text}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from '../ui/button';
-import { TradeObj } from '@/app/typs/types';
+import { TradeObj } from '@/app/types/types';
 
 export const FilterButtons = ({
   trades,
@@ -14,7 +14,9 @@ export const FilterButtons = ({
     setFiltable(
       text === '全て表示'
         ? trades
-        : trades.filter((table) => table.location === text)
+        : trades.filter(
+            (table) => table.properties.location.select.name === text
+          )
     );
   };
 

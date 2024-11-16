@@ -1,4 +1,4 @@
-import { cromOBJ } from '@/app/typs/types';
+import { cromOBJ } from '@/app/types/types';
 
 const rooms0 = {
   room1: { color: 'text-green-500', info: '大/3/3カ' },

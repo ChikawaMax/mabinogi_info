@@ -1,4 +1,4 @@
-import { CalcObj } from '@/app/typs/types';
+import { CalcObj } from '@/app/types/types';
 import { Input } from '@/components/ui/input';
 import { Dispatch, SetStateAction } from 'react';
 

@@ -5,7 +5,7 @@ import CromBody from './CromBody';
 import CromHeader from './CromHeader';
 import { crombas } from './CromObj';
 import { useState } from 'react';
-import { cromOBJ } from '@/app/typs/types';
+import { cromOBJ } from '@/app/types/types';
 import { CrombasFilter } from './CrombasFilter';
 
 const CrombasTable = () => {
